@@ -19,5 +19,23 @@ ifneq ($(TARGET_BUILD_GAPPS),false)
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 endif
 
+# Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig
+
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true
+
 # Build vendor image
 BUILD_WITHOUT_VENDOR := false
+
+# Utilities
+PRODUCT_PACKAGES += \
+    libjson \
+    libtinyxml
+
+# WiFi
+PRODUCT_PACKAGES += \
+    libwifi-hal-qcom
