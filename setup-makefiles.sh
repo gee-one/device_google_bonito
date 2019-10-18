@@ -44,6 +44,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$GAHS_ROOT" true
 write_headers "bonito sargo"
 
 write_makefiles "$MY_DIR"/bonito-proprietary-files.txt true
+write_makefiles "$MY_DIR"/bonito-proprietary-files-vendor.txt true
 
 cat << EOF >> "$ANDROIDMK"
 
@@ -60,6 +61,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$GAHS_ROOT"
 write_headers
 
 write_makefiles "$MY_DIR"/sargo-proprietary-files.txt true
+write_makefiles "$MY_DIR"/sargo-proprietary-files-vendor.txt true
 
 cat << EOF >> "$ANDROIDMK"
 
