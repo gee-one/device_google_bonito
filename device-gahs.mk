@@ -18,3 +18,6 @@
 ifneq ($(TARGET_BUILD_GAPPS),false)
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 endif
+
+# Build vendor image
+BUILD_WITHOUT_VENDOR := false
