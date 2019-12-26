@@ -60,7 +60,6 @@ setup_vendor "$DEVICE" "$VENDOR" "$GAHS_ROOT"
 # Copyright headers and guards
 write_headers
 
-write_makefiles "$MY_DIR"/sargo-proprietary-files.txt true
 write_makefiles "$MY_DIR"/sargo-proprietary-files-vendor.txt true
 
 cat << EOF >> "$ANDROIDMK"
