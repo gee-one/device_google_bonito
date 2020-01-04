@@ -14,16 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/google/bonito/aosp_sargo.mk)
-$(call inherit-product, vendor/gahs/config/common.mk)
-$(call inherit-product, device/google/bonito/device-gahs.mk)
-
-PRODUCT_NAME := gahs_sargo
-PRODUCT_BRAND := google
-PRODUCT_MODEL := Pixel 3a
-
-# Spoof to pass SafetyNet
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=sargo
-
-BUILD_FINGERPRINT := google/sargo/sargo:10/QQ1A.200105.002/6031801:user/release-keys
+# Include Google apps by default
+ifneq ($(TARGET_BUILD_GAPPS),false)
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+endif
