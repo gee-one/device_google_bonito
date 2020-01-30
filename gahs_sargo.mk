@@ -21,6 +21,9 @@ $(call inherit-product, device/google/bonito/device-gahs.mk)
 $(call inherit-product-if-exists, vendor/google/sargo/sargo-vendor.mk)
 $(call inherit-product-if-exists, vendor/google/bonito/bonito-vendor.mk)
 
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2280
+
 PRODUCT_NAME := gahs_sargo
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 3a
