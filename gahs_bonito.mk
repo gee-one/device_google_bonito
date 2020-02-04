@@ -30,4 +30,5 @@ PRODUCT_MODEL := Pixel 3a XL
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bonito
 
-BUILD_FINGERPRINT := google/bonito/bonito:10/QQ1A.200105.002/6031801:user/release-keys
+include device/google/bonito/base_fingerprint.mk
+BUILD_FINGERPRINT := google/bonito/bonito:$(BASE_FINGERPRINT):user/release-keys
